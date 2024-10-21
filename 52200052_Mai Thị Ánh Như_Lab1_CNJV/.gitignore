@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+=======
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+>>>>>>> f99847babf3c358a75c69eabad3708a916a801c6
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
