@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean 1: Sử dụng <property> -->
+    <bean id="product1" class="org.example.Product">
+        <property name="id" value="P001"/>
+        <property name="name" value="Product 1"/>
+        <property name="price" value="100.0"/>
+        <property name="description" value="Description of Product 1"/>
+    </bean>
+
+    <!-- Bean 2: Sử dụng <constructor-arg> -->
+    <bean id="product2" class="org.example.Product">
+        <constructor-arg value="P002"/>
+        <constructor-arg value="Product 2"/>
+        <constructor-arg value="200.0"/>
+        <constructor-arg value="Description of Product 2"/>
+    </bean>
+
+    <!-- Bean 3: Sử dụng <property>, và là singleton -->
+    <bean id="product3" class="org.example.Product" scope="singleton">
+        <property name="id" value="P003"/>
+        <property name="name" value="Product 3"/>
+        <property name="price" value="300.0"/>
+        <property name="description" value="Description of Product 3"/>
+    </bean>
+</beans>
