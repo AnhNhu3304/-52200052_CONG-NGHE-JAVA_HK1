@@ -74,6 +74,14 @@
             <input id="password" name="password" type="password" class="form-control" placeholder="Password" required>
         </div>
 
+<<<<<<< HEAD
+=======
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="showPassword">
+            <label class="form-check-label" for="showPassword">Hiển thị mật khẩu</label>
+        </div>
+
+>>>>>>> c8af646 (CNJV)
         <div class="form-group text-center">
             <button type="submit" class="btn btn-login btn-block">Login</button>
         </div>
@@ -84,5 +92,20 @@
     </form>
 </div>
 
+<<<<<<< HEAD
+=======
+<script>
+    document.getElementById('showPassword').addEventListener('change', function () {
+        const passwordField = document.getElementById('password');
+
+        if (this.checked) {
+            passwordField.type = 'text';  // Hiển thị mật khẩu
+        } else {
+            passwordField.type = 'password';  // Ẩn mật khẩu
+        }
+    });
+</script>
+
+>>>>>>> c8af646 (CNJV)
 </body>
 </html>
