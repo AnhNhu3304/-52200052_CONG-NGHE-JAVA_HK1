@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi Tiết Sản Phẩm</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* CSS tùy chỉnh để căn chỉnh và làm đẹp */
+        .product-container {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .product-price {
+            color: #000000;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .btn-primary {
+            background-color: #51A7BF;
+            border: none;
+        }
+        .btn-danger {
+            background-color: #51A7BF;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #4598a8;
+        }
+        .btn-danger:hover {
+            background-color: #4598a8;
+        }
+        .quantity-input {
+            width: 60px;
+            display: inline-block;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row product-container">
+        <div class="col-md-5">
+            <img th:src="${product.imageUrl}" class="img-fluid product-image" alt="Sản phẩm">
+        </div>
+        <div class="col-md-7">
+            <h2 th:text="${product.name}" class="font-weight-bold mb-3">Tên sản phẩm</h2>
+            <p th:text="${product.description}" class="text-muted mb-4">Mô tả sản phẩm</p>
+            <p class="product-price" th:text="${product.price} + ' đ'">Giá</p>
+            <p><strong>Danh mục:</strong> <span th:text="${product.category}">Category</span></p>
+            <p><strong>Màu sắc:</strong> <span th:text="${product.color}">Color</span></p>
+
+            <div class="form-group d-flex align-items-center">
+                <label for="quantity" class="mr-2">Số lượng:</label>
+                <input type="number" id="quantity" name="quantity" class="form-control quantity-input" min="1" value="1">
+            </div>
+
+            <div class="action-buttons">
+                <form th:action="@{/cart/add}" method="post" class="m-0">
+                    <input type="hidden" name="productId" th:value="${product.id}" />
+                    <input type="hidden" name="quantity" th:value="1" />
+                    <button type="submit" class="btn btn-primary">Thêm vào giỏ hàng</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
