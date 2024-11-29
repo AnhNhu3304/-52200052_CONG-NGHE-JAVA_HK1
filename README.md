@@ -1,10 +1,10 @@
 # SpringCommerce
 
-SpringCommerce là một ứng dụng web đơn giản dùng để bán những sản phẩm Game bản quyền của Puahuhu Store. Vì nhu cầu về việc mua game bản quyền đang ngày càng gia tăng, Puahuhu Store đã xây dựng SpringCommerce để đáp ứng với các chức năng còn hạn chế.
+SpringCommerce là một ứng dụng web đơn giản nhưng mạnh mẽ, được thiết kế để phục vụ nhu cầu bán hàng thời trang trực tuyến của NHU STORE. Với giao diện dễ sử dụng và tối ưu hóa trải nghiệm người dùng, SpringCommerce giúp khách hàng dễ dàng tìm kiếm và lựa chọn các sản phẩm thời trang đa dạng như quần áo, phụ kiện và giày dép.
 
 ## Mô hình phát triển phần mềm
 
-Dự án SpringCommerce của Puahuhu Store được áp dụng mô hình phát triển phần mềm Waterfall, phù hợp cho một hệ thống đơn giản và yêu cầu rõ ràng. Mô hình Waterfall có các giai đoạn chính bao gồm:
+Dự án SpringCommerce của NHU STORE được phát triển theo mô hình Waterfall, phù hợp với các yêu cầu rõ ràng và cấu trúc hệ thống đơn giản. Mô hình này giúp đảm bảo tiến độ và sự kiểm soát chặt chẽ trong từng giai đoạn phát triển. Quá trình phát triển của dự án được chia thành các bước chính sau:
 
 1. **Phân tích yêu cầu**: Thu thập và xác định các yêu cầu từ đề bài. Dự án sẽ hỗ trợ hiển thị sản phẩm, lọc theo tiêu chí và đặt hàng qua giỏ hàng.
    
@@ -18,7 +18,7 @@ Dự án SpringCommerce của Puahuhu Store được áp dụng mô hình phát 
 
 ## Chức năng chính
 
-1. **Hiển thị sản phẩm**: Giao diện đơn giản hiển thị toàn bộ Game bản quyền mà Puahuhu Store cung cấp. Người dùng có thể lọc và tìm kiếm sản phẩm theo các tiêu chí như danh mục, tên, giá, thể loại và studio làm ra nó.
+1. **Hiển thị sản phẩm**: Giao diện đơn giản hiển thị toàn bộ sản phẩm thời trang mà NHU STORE cung cấp. Người dùng có thể lọc và tìm kiếm sản phẩm theo các tiêu chí như danh mục, tên, giá, màu sắc và nhãn hiệu.
 
 2. **Giỏ hàng và đặt hàng**: Người dùng có thể thêm sản phẩm vào giỏ hàng và tiến hành đặt hàng.
 
@@ -63,23 +63,23 @@ Cấu trúc này giúp ứng dụng dễ dàng bảo trì, mở rộng và đả
 
 - Đầu tiên ta sẽ nhấn vào phần Download ZIP để tải dự án về máy
   
-     ![image](https://github.com/user-attachments/assets/da6e284a-6bd1-45d9-8382-e6fa2a4bf4f8)
+     ![image](picture/Picture1.png)
 
 - Sau đó hãy giải nén và mở dự án bằng IntelliJ
 
-     ![image](https://github.com/user-attachments/assets/33f618c4-b291-4c8f-8139-934953b82edb)
+     ![image](picture/Picture2.png)
 
-- Tiếp đến ta mở Xampp để kết nối vào cơ sở dữ liệu
+- Tiếp đến ta mở MySQL Workbench để kết nối vào cơ sở dữ liệu
   
-     ![Screenshot 2024-11-14 145315](https://github.com/user-attachments/assets/14e453bf-6268-4d7d-be6f-97fe03e9c21b)
-
+     ![image](picture/Picture3.png)
+     ![image](picture/Picture4.png)
 - Kế đến ta sẽ nhấn vào nút chạy như ảnh dưới
 
-     ![image](https://github.com/user-attachments/assets/ec6ca7a3-8005-4cf5-82b8-c6c37c11ba65)
+     ![image](picture/Picture5.png)
 
 - Cuối cùng ta vào Google Chrome hoặc các trình duyệt khác và chỉa tới đường dẫn localhost:8080, nếu như thành công ta sẽ được dẫn đến trang đăng nhập
 
-     ![image](https://github.com/user-attachments/assets/8d443c05-51ae-4b87-8eb4-f1f3d21f8499)
+     ![image](picture/Picture6.png)
 
 ## Kiểm thử API
 
@@ -89,61 +89,61 @@ Cấu trúc này giúp ứng dụng dễ dàng bảo trì, mở rộng và đả
      
       - http://localhost:8080/api/products: dùng để hiện thị tất cả các sản phẩm có trong cơ sở dữ liệu
 
-         ![image](https://github.com/user-attachments/assets/fb416c31-f115-4b0b-918f-106c977a7cd8)
+         ![image](picture/Picture7.png)
 
       - http://localhost:8080/api/product/{id}: dùng để hiện thị sản phẩm ứng với id của sản phẩm có trong cơ sở dữ liệu
 
-         ![image](https://github.com/user-attachments/assets/d495f96f-f85f-4480-b784-8bf620ae0bb4)
+         ![image](picture/Picture8.png)
 
    - **POST**: http://localhost:8080/api/product: dùng để thêm sản phẩm vào cơ sở dữ liệu
  
-      - Cơ sở dữ liệu hiện tại đang có id lớn nhất là 10:
+      - Cơ sở dữ liệu hiện tại đang có id lớn nhất là 15:
     
-        ![image](https://github.com/user-attachments/assets/933c7042-534c-4460-a1ff-296fb807b02d)
+        ![image](picture/Picture9.png)
           
       - Ta sẽ thêm như sau bằng phương thức **POST**:
     
-        ![image](https://github.com/user-attachments/assets/74b91001-8087-4463-a492-9df8b86e5551)
+        ![image](picture/Picture10.png)
 
       - Cơ sở dữ liệu sau khi thêm sản phẩm mới vào:
     
-        ![image](https://github.com/user-attachments/assets/1f715aac-1129-44af-84be-90da22dcd625)
+        ![image](picture/Picture11.png)
 
-     - Cuối cùng là ở localhost ta cũng đã thêm sản phẩm Assassin's Creed II sau khi sử dụng phương thức **POST**
+     - Cuối cùng là ở localhost ta cũng đã thêm sản phẩm “Giày thể thao” sau khi sử dụng phương thức **POST**
 
-        ![image](https://github.com/user-attachments/assets/a4cc77ea-c00e-4e4a-85e0-0f2cc7d35cd1)
+        ![image](picture/Picture12.png)
 
    - **PUT**: http://localhost:8080/api/product/{id}: dùng để chỉnh sửa sản phẩm ứng với id sản phảm phẩm có trong cơ sở dữ liệu
 
-      - Ta sẽ sử dụng phương thức **GET** để lấy sản phẩm với id tùy chọn, ảnh dưới đây sẽ chọn id là 11:
+      - Ta sẽ sử dụng phương thức **GET** để lấy sản phẩm với id tùy chọn, ảnh dưới đây sẽ chọn id là 16:
     
-        ![image](https://github.com/user-attachments/assets/75c3b02a-86c4-4d39-8f99-985aa278d707)
+        ![image](picture/Picture13.png)
 
-      - Sau đó sử dụng phương thức **PUT** để chỉnh sửa như sau, ảnh dưới sẽ chỉnh sửa giá từ 599.000đ thành 600.000đ:
+      - Sau đó sử dụng phương thức **PUT** để chỉnh sửa như sau, ảnh dưới sẽ chỉnh sửa giá từ 200.000đ thành 300.000đ:
     
-        ![image](https://github.com/user-attachments/assets/19654a42-7217-4c84-a2bb-e19134399e69)
+        ![image](picture/Picture14.png)
 
       - Tiếp đến ta sẽ kiểm tra lại bằng phương thức **GET**:
     
-        ![image](https://github.com/user-attachments/assets/b9fc8b2f-199e-4e68-b2e7-750630818ffc)
+        ![image](picture/Picture15.png)
 
       - Cuối cùng là kiểm tra trên localhost:
     
-        ![image](https://github.com/user-attachments/assets/f023e086-bd62-4378-bd97-c297a1641f48)
+        ![image](picture/Picture16.png)
 
    - **DELETE**: http://localhost:8080/api/product/{id}: dùng để xóa sản phẩm ứng với id sản phẩm có trong cơ sở dữ liệu
  
-      - Ta sẽ sử dụng phương thức **DELETE** để xóa sản phẩm với id bất kì, ảnh dưới sẽ chọn id là 11 tương ứng với Assassin's Creed II:
+      - Ta sẽ sử dụng phương thức **DELETE** để xóa sản phẩm với id bất kì, ảnh dưới sẽ chọn iid là 16 tương ứng với “Giày thể thao”:
     
-        ![image](https://github.com/user-attachments/assets/d1f724c1-75d1-4ef9-bd54-fd979d5f28ef)
+        ![image]picture/Picture17.png)
 
       - Sau khi xóa ta kiểm tra lại bằng phương thức **GET**:
     
-        ![image](https://github.com/user-attachments/assets/4905e514-5eec-4aeb-a993-72c911d777cb)
+        ![image](picture/Picture18.png)
 
       - Cuối cùng ta kiểm tra trên localhost:
     
-        ![image](https://github.com/user-attachments/assets/dafbf096-eb45-48e9-8f41-5596d256aa05)
+        ![image](picture/Picture19.png)
 
 - Đối với Order ta sẽ có các phương thức:
   
@@ -151,22 +151,22 @@ Cấu trúc này giúp ứng dụng dễ dàng bảo trì, mở rộng và đả
  
      - http://localhost:8080/api/orders: dùng để hiện thị tất cả các hóa đơn có trong cơ sở dữ liệu
 
-         ![image](https://github.com/user-attachments/assets/1fb67824-df1c-4bbb-bb6a-7d4519ea5584)
+         ![image](picture/Picture20.png)
 
       - http://localhost:8080/api/orders/{id}: dùng để hiện thị hóa đơn ứng với id của hóa đơn có trong cơ sở dữ liệu
 
-         ![image](https://github.com/user-attachments/assets/59bee0ae-48cf-4d94-9215-baf2d6c2162f)
+         ![image](picture/Picture21.png)
 
    - **DELETE**: http://localhost:8080/api/order/{id}: dùng để xóa hóa đơn ứng với id hóa đơn có trong cơ sở dữ liệu
  
       - Ta sẽ sử dụng phương thức **DELETE** để xóa hóa đơn với id bất kì, ảnh dưới sẽ chọn id là 2:
  
-        ![image](https://github.com/user-attachments/assets/2a9320d9-2f01-42a1-aded-831c48135a0a)
+        ![image](picture/Picture22.png)
 
       - Sau khi xóa ta kiểm tra lại bằng phương thức **GET**:
     
-        ![image](https://github.com/user-attachments/assets/676e064b-dfbc-47f6-95fa-99465e5cebb7)
+        ![image](picture/Picture23.png)
 
       - Cuối cùng ta kiểm tra trên localhost:
     
-        ![image](https://github.com/user-attachments/assets/12b5f591-6d46-4604-a5b8-a73b8118670f)
+        ![image](picture/Picture24.png)
